@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: primuslearning
+  name: frontend
   labels:
-    app: primuslearning
+    app: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: primuslearning
+      app: frontend
   template:
     metadata:
       labels:
-        app: primuslearning
+        app: frontend
     spec:
       containers:
-        - name: primuslearning
+        - name: frontend
           image: 243560554745.dkr.ecr.eu-west-3.amazonaws.com/fesia255:1.1
           imagePullPolicy: Always
           ports:
